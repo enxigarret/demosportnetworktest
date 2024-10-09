@@ -40,25 +40,25 @@ export default function SignUp() {
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
                   <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="full-name">Nom Prenom <span className="text-red-600">*</span></label>
-                  <input id="full-name" type="text" className="form-input w-full text-gray-300" placeholder="First and last name" required />
+                  <input id="full-name" type="text" className="form-input w-full text-gray-300" placeholder="Nom prenom" required />
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
                   <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="company-name">Nom entreprise <span className="text-red-600">*</span></label>
-                  <input id="company-name" type="text" className="form-input w-full text-gray-300" placeholder="Your company or app name" required />
+                  <input id="company-name" type="text" className="form-input w-full text-gray-300" placeholder="Nom entreprise" required />
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
                   <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email"> Email <span className="text-red-600">*</span></label>
-                  <input id="email" type="email" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
+                  <input id="email" type="email" className="form-input w-full text-gray-300" placeholder="email@yourcompany.com" required />
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
                   <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Mot de passe <span className="text-red-600">*</span></label>
-                  <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
+                  <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Mot de passe" required />
                 </div>
               </div>
               <div className="text-sm text-gray-500 text-center">

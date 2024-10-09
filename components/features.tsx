@@ -1,6 +1,9 @@
 import FeatImage01 from '@/public/images/features-03-image-01.png'
 import Image from 'next/image'
 
+import VideoThumb from '@/public/images/photo_badminton.jpeg'
+import ModalVideo from '@/components/modal-video'
+
 export default function Features() {
 
   
@@ -11,50 +14,58 @@ export default function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">Nos sportive du moment</h2>
-            <p className="text-xl text-gray-400">Notre mission : faire vivre les sportives et les sportifs para de haut niveau de leur sport. Donnons le pouvoir aux vrais acteurs de l’écosystème sportif !</p>
+            <h2 className="h2 mb-4 text-black-800">Notre sportif du moment</h2>
+            <p className="text-xl text-gray-400">Découvrez le handisport à travers Thomas Numitor</p>
           </div>
 
           {/* Items */}
-          <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks>
-
+          {/* <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks> */}
+          <div className="relative pt-0 pb-10 md:pt-0 md:pb-16">
+          <ModalVideo
+            thumb={VideoThumb}
+            thumbWidth={1024}
+            thumbHeight={576}
+            thumbAlt="Modal video thumbnail"
+            video="/videos/video.mp4"
+            videoWidth={1920}
+            videoHeight={1080} />
             {/* 1st item */}
      
-            <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
+            {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
             <Image className="mx-auto md:max-w-none h-auto" src={FeatImage01} width={230} height={180} alt="Features 01" />
               <h4 className="h4 mb-2">Jade MARECHAL</h4>
               <p className="text-lg text-gray-400 text-center">Escrime</p>
               <p className="text-lg text-gray-400 text-center">2x Championne d’Europe en équipes</p>
-            </div>
+            </div> */}
 
             {/* 2nd item */}
-            <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
+            {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="[data-aos-id-blocks]">
             <Image className="mx-auto md:max-w-none h-auto" src={FeatImage01} width={230} height={180} alt="Features 01" />
          
               <h4 className="h4 mb-2">Morgan CHARRIERE</h4>
               <p className="text-lg text-gray-400 text-center">MMA</p>
               <p className="text-lg text-gray-400 text-center">Champion du Cage Warriors +20 victoires en professionnel</p>
-            </div>
+            </div> */}
 
             {/* 3rd item */}
-            <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
+            {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="[data-aos-id-blocks]">
               
             <Image className="mx-auto md:max-w-none h-auto" src={FeatImage01} width={230} height={180} alt="Features 01" />
 
               <h4 className="h4 mb-2">Camille LACOURT</h4>
               <p className="text-lg text-gray-400 text-center">MMA</p>
               <p className="text-lg text-gray-400 text-center">5x Champion du Monde5x Champion d’Europe 14x Champion de France</p>
-            </div>
+            </div> */}
 
                         {/* buttton */}
                         <div className="max-w-12xl mx-auto px-4 sm:px-6">
 
 {/* Section header */}
-<div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+{/* <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
 
 
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-auto" href="#0">Voir les autre sportives</a>
-              </div>
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-auto" href="#0">Découvrir les ambassadeurs</a>
+              </div> */}
             </div>
 
             {/* 4th item

@@ -34,7 +34,7 @@ export default function ModalVideo({
       <div>
         <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
           <Image src={thumb} width={thumbWidth} height={thumbHeight} alt={thumbAlt} />
-          {/* <button className="absolute group" onClick={() => { setModalOpen(true) }} aria-label="Watch the video">
+          <button className="absolute group" onClick={() => { setModalOpen(true) }} aria-label="Watch the video">
             <svg className="w-16 h-16 sm:w-20 sm:h-20 hover:opacity-75 transition duration-150 ease-in-out" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient x1="78.169%" y1="9.507%" x2="24.434%" y2="90.469%" id="a">
@@ -45,7 +45,7 @@ export default function ModalVideo({
               <circle fill="url(#a)" cx="44" cy="44" r="44" />
               <path className="fill-current text-purple-600" d="M52 44a.999.999 0 00-.427-.82l-10-7A1 1 0 0040 37V51a.999.999 0 001.573.82l10-7A.995.995 0 0052 44V44c0 .001 0 .001 0 0z" />
             </svg>
-          </button> */}
+          </button>
         </div>
       </div>
       {/* End: Video thumbnail */}
@@ -77,12 +77,23 @@ export default function ModalVideo({
             leaveTo="opacity-0 scale-95"
           >
             <div className="max-w-6xl mx-auto h-full flex items-center">
-              <Dialog.Panel className="w-full max-h-full aspect-video bg-black overflow-hidden">
-                <video ref={videoRef} width={videoWidth} height={videoHeight} loop controls>
+              {/* <Dialog.Panel className="w-full max-h-full aspect-video bg-black overflow-hidden">*/}
+               {/* <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+               </iframe> */}
+                {/* <video ref={videoRef} width={videoWidth} height={videoHeight} loop controls>
                   <source src={video} type="video/mp4" />
                   Your browser does not support the video tag.
-                </video>
-              </Dialog.Panel>
+                </video> */}
+              {/* </Dialog.Panel> */} 
+              {/* <Dialog.Panel className="max-w-lg space-y-4 border bg-white p-12"> */}
+              <Dialog.Panel className="w-full max-h-full aspect-video bg-black overflow-hidden">
+              <iframe width="1920" height="1080"
+                    src="https://www.youtube.com/watch?v=WGMSrMsThGw?autoplay=1&mute=1">
+               </iframe>
+            <p>Are you sure you want to deactivate your account? All of your data will be permanently removed.</p>
+       
+          </Dialog.Panel>
             </div>
           </Transition.Child>
           {/* End: Modal dialog */}

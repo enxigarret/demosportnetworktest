@@ -1,5 +1,4 @@
-import VideoThumb from '@/public/images/hero-image-01.jpg'
-import ModalVideo from '@/components/modal-video'
+
 
 export default function Hero() {
   return (
@@ -28,22 +27,18 @@ export default function Hero() {
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">The Sport Network est un réseau social nouveau, où des athlètes paralympiques, des entreprises, des para-athlètes professionnels, amateurs de sport en situation de handicap physique ou mental se rencontrent.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Découvrir nos champinions</a>
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Découvrir Thomas Numitor</a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
                 <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Prendre rendez-vous</a>
               </div>
+              <div data-aos="fade-up" data-aos-delay="600">
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">partager et rester en contact avec des sportifs </a>
+              </div>
             </div>
           </div>
 
-          {/* <ModalVideo
-            thumb={VideoThumb}
-            thumbWidth={1024}
-            thumbHeight={576}
-            thumbAlt="Modal video thumbnail"
-            video="/videos/video.mp4"
-            videoWidth={1920}
-            videoHeight={1080} /> */}
+      
 
         </div>
 

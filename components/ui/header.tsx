@@ -25,7 +25,7 @@ export default function Header() {
                   href="/signup"
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  Champions
+                  Ambassadeurs
                 </Link>
               </li>
               <li>
@@ -41,7 +41,23 @@ export default function Header() {
                   href="/list"
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  Disciplines
+                  Handisports
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/list"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Concept
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/list"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
+                  Tarif
                 </Link>
               </li>
               <li>
