@@ -1,15 +1,13 @@
 
+import BlockMaintenance from "@/components/block-maintenance";
 import HeroChamp from "@/components/hero-champ";
 import Zigzag from "@/components/zigzag";
-import ZigzagChmap from "@/components/zigzagchamp";
 
-export default function Champions() {
+export default function Maintenance() {
     return (
       <>
        
-      
-      <ZigzagChmap />
-    
+      <BlockMaintenance />
       </>
     )
   }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Features() {
     return (
       <section className="mt-20">
@@ -21,7 +23,9 @@ export default function Features() {
                   <path className="stroke-current text-purple-300" d="M43 42h-9M43 37h-9" strokeLinecap="square" strokeWidth="2" />
                 </svg> */}
                 <div className="w-32 h-32 mb-18" >
-   						<img alt="" src="http://www.handisport.org/wp-content/uploads/2014/07/vignette_athle.jpg" />   					
+                <Link href="/athl" className="block" aria-label="Cruip">
+   						<img alt="" src="http://www.handisport.org/wp-content/uploads/2014/07/vignette_athle.jpg" /> 
+              </Link>  					
                 </div>
 
                 <h4 className="h4 mb-2 text-gray-500">Athlétisme</h4>

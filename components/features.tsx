@@ -13,9 +13,14 @@ export default function Features() {
         <div className="py-12 md:py-20">
 
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
+          <div className="max-w-3xl mx-auto text-center pb-4 md:pb-20">
             <h2 className="h2 mb-4 text-black-800">Notre sportif du moment</h2>
             <p className="text-xl text-gray-400">Découvrez le handisport à travers Thomas Numitor</p>
+          </div>
+          <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center pb-4">
+             <button >
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0" >Découvrir les ambassadeurs </a>
+             </button>
           </div>
 
           {/* Items */}

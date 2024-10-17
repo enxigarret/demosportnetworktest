@@ -1,6 +1,46 @@
+"use client"; 
+
+import { Dialog } from "@headlessui/react"
+import Link from "next/link";
+import { useState } from "react"
 
 
+const ModalMaintenance=({isOpen,onClose}:{isOpen:boolean,onClose:()=>void})=>{
+ 
+  return(
+
+    <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={onClose}>
+    <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div className="flex min-h-full items-center justify-center p-4">
+        <Dialog.Panel
+     
+          className="w-full max-w-md rounded-xl bg-gray/5 p-20 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+        >
+          <Dialog.Title as="h3" className="text-dark-800 text-2xl font-medium ">
+              Réseau social en maintenance.
+          </Dialog.Title>
+          {/* <p className="mt-2 text-sm/6 text-white/50">
+            Your payment has been successfully submitted. We’ve sent you an email with all of the details of your
+            order.
+          </p> */}
+          {/* <div className="mt-4">
+            <.Button
+              className="inline-flex items-center gap-2 rounded-md bg-gray-700 py-1.5 px-3 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-600 data-[focus]:outline-1 data-[focus]:outline-white data-[open]:bg-gray-700"
+              onClick={close}
+            >
+              Got it, thanks!
+            </Button>
+          </div> */}
+        </Dialog.Panel>
+      </div>
+    </div>
+  </Dialog>
+  )
+}
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
@@ -27,13 +67,18 @@ export default function Hero() {
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">The Sport Network est un réseau social nouveau, où des athlètes paralympiques, des entreprises, des para-athlètes professionnels, amateurs de sport en situation de handicap physique ou mental se rencontrent.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
+              <Link href="/champions" className="block" aria-label="Cruip">
                 <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Découvrir Thomas Numitor</a>
+                </Link>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
                 <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Prendre rendez-vous</a>
               </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">partager et rester en contact avec des sportifs </a>
+              <div data-aos="fade-up" data-aos-delay="600"  >
+                 <ModalMaintenance  isOpen={isOpen} onClose={()=>setIsOpen(false)}/>
+                 <button onClick={()=>setIsOpen(true)}>
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0" >partager et rester en contact avec des sportifs </a>
+                </button>
               </div>
             </div>
           </div>
