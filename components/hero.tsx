@@ -68,16 +68,16 @@ export default function Hero() {
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
               <Link href="/champions" className="block" aria-label="Cruip">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Découvrir Thomas Numitor</a>
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0 whitespace-nowrap" href="#0">Découvrir <br/> Thomas Numitor</a>
                 </Link>
               </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Prendre rendez-vous</a>
+              <div data-aos="fade-up " data-aos-delay="600">
+                <a className="btn text-white h-37 bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Prendre <br/>rendez-vous</a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600"  >
                  <ModalMaintenance  isOpen={isOpen} onClose={()=>setIsOpen(false)}/>
                  <button onClick={()=>setIsOpen(true)}>
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0" >partager et rester en contact avec des sportifs </a>
+                <a className="btn text-white bg-gray-700 h-70px hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0" >Partager via <br/>le réseau social </a>
                 </button>
               </div>
             </div>

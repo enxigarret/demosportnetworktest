@@ -1,7 +1,117 @@
+"use client"
 import Link from 'next/link'
 import MobileMenu from './mobile-menu'
 
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from 'react';
+
+const Products = () => {
+  return (
+    <div>
+      <div className="flex gap-4">
+        <div>
+          {/* <h3 className="mb-2 text-sm font-medium">Startup</h3> */}
+          <a href="#" className="mb-1 block text-sm text-neutral-400">
+           Athlétisme
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Badminton sourds
+          </a>
+          <a href="#" className="mb-1 block text-sm text-neutral-400">
+          Cyclisme
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Boccia
+          </a>
+          <a href="#" className="mb-1 block text-sm text-neutral-400">
+          Boules et pétanque sourds
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Bowling sourds
+          </a>
+          <a href="#" className="mb-1 block text-sm text-neutral-400">
+          Canoë-kayak
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Cécifoot (foot à 5 DV)
+          </a>
+          <a href="#" className="mb-1 block text-sm text-neutral-400">
+          Basket-ball
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Danse
+          </a>
+          <a href="#" className="mb-1 block text-sm text-neutral-400">
+          Développé couché & Musculation
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Équitation
+          </a>
+          <a href="#" className="mb-1 block text-sm text-neutral-400">
+          Escrime
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Foot fauteuil électrique
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Football sourds
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          FUTSAL
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Goalball
+          </a>
+          <a href="#" className="block text-sm text-neutral-400">
+          Handball Sourds
+          </a>
+        </div>
+        </div>
+        </div>
+    )}
+
+
+const ButtonHover =({selected}:{selected:boolean})=>{
+  return(
+    <motion.div
+    id="overlay-content"
+    initial={{
+      opacity: 0,
+      y: 8,
+    }}
+    animate={{
+      opacity: 1,
+      y: 0,
+    }}
+    exit={{
+      opacity: 0,
+      y: 8,
+    }}
+    className={`absolute left-0 top-[calc(100%_+_24px)] w-96 rounded-lg border border-neutral-600 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-800 p-4 ${selected?"visible":"invisible"}`}
+  >
+    <div className="overflow-hidden" >
+    {selected  && (
+      <motion.div
+        initial={{
+          opacity: 0,
+          x:  0,
+        }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.25, ease: "easeInOut" }}
+      >
+        <Products />
+      </motion.div>
+    )}
+    
+  </div>
+  </motion.div>
+  )
+}
+
 export default function Header() {
+  const [selected, setSelected] = useState(false);
+
+
   return (
     <header className="absolute w-full z-30">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -36,17 +146,24 @@ export default function Header() {
                   Entreprise
                 </Link>
               </li>
-              <li>
+              <li  onMouseLeave={() => setSelected(false)}  onMouseEnter={() => setSelected(true)}>
+                <div  className="relative flex h-fit gap-2">
                 <Link
                   href="/list"
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Handisports
+                  
                 </Link>
+                <AnimatePresence>
+                    <ButtonHover selected={selected} />
+                </AnimatePresence>
+                </div>
+             
               </li>
               <li>
                 <Link
-                  href="/list"
+                  href="/"
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Concept
@@ -57,7 +174,7 @@ export default function Header() {
                   href="/list"
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  Tarif
+                  Réserver
                 </Link>
               </li>
               <li>
