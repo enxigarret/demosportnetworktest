@@ -61,7 +61,7 @@ export default function SignUp() {
                   <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Mot de passe" required />
                 </div>
               </div> */}
-              <div className="text-sm text-gray-500 text-center">
+              <div className="text-sm text-purple-600 text-center">
                 I agree to be contacted by The Sport Network <Link href="#" className="underline text-gray-400 hover:text-gray-200 hover:no-underline transition duration-150 ease-in-out">Privacy Policy</Link>.
               </div>
               <div className="flex flex-wrap -mx-3 mt-6">
