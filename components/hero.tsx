@@ -72,7 +72,7 @@ export default function Hero() {
                 </Link>
               </div>
               <div data-aos="fade-up " data-aos-delay="600">
-                <a className="btn text-white h-37 bg-gray-700 hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="#0">Prendre <br/>rendez-vous</a>
+                <a className="btn text-white h-37 bg-gray-700 hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="mailto:pasdeloup.jorge@gmail.com">Prendre <br/>rendez-vous</a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600"  >
                  <ModalMaintenance  isOpen={isOpen} onClose={()=>setIsOpen(false)}/>
