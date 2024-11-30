@@ -6,7 +6,8 @@ const FacebookVideoEmbed = () => {
   return (
     <div>
       <iframe
-        src="https://players.brightcove.net/6012566821001/9yinZu1tBI_default/index.html?videoId=6361074015112 "
+        src="https://player.vimeo.com/video/957140368?h=6a1d0f243c"
+       
         width="1024"
         height="576"
         style={{ border: 'none', overflow: 'hidden' }}
@@ -17,5 +18,6 @@ const FacebookVideoEmbed = () => {
     </div>
   );
 };
+
 
 export default FacebookVideoEmbed;
