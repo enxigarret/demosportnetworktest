@@ -140,13 +140,13 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/signup"
+                  href="/entreprise"
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Entreprise
                 </Link>
               </li>
-              <li  onMouseLeave={() => setSelected(false)}  onMouseEnter={() => setSelected(true)}>
+              {/* <li  onMouseLeave={() => setSelected(false)}  onMouseEnter={() => setSelected(true)}>
                 <div  className="relative flex h-fit gap-2">
                 <Link
                   href="/list"
@@ -160,7 +160,7 @@ export default function Header() {
                 </AnimatePresence>
                 </div>
              
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/"
@@ -171,15 +171,16 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/list"
+                  href="mailto:pasdeloup.jorge@gmail.com"
                   className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   Réserver
                 </Link>
               </li>
               <li>
-                <Link href="/signup" className="btn-sm text-white bg-green-600 hover:bg-green-700 ml-3">
-                  Sign up
+                {/* <Link href="/signup" className="btn-sm text-white bg-green-600 hover:bg-green-700 ml-3"> */}
+                <Link href="mailto:pasdeloup.jorge@gmail.com" className="btn-sm text-white bg-green-600 hover:bg-green-700 ml-3">
+                  Se connecter
                 </Link>
               </li>
             </ul>
