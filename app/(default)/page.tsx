@@ -19,11 +19,10 @@ export default function Home() {
     <>
       <Hero />
       <Features />
-      <Entreprises />
-      <Blocks />
-      <BlockMaintenance />
-      <Newsletter />
-      <Testimonials/>
+ 
+  
+
+    
 
       <Zigzag />
       {/* <Testimonials />
