@@ -13,18 +13,22 @@ export default function Athl(){
             {/* Section header */}
             <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20"></div>
          <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-anchor="[data-aos-id-blocks]">
-         <div className="grid gap-20">
-         <div className="md:grid md:grid-cols-12 md:gap-6 items-center">
+         {/* <div className="grid gap-20"> */}
+         <div className="md:grid md:grid-cols-2 md:gap-6 items-center">
         {/* <div className="w-32 h-32 mb-18" > */}
-          <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-0" data-aos="fade-up">
+          <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-1 lg:col-span-1 mb-8  md:mb-0 md:order-0" data-aos="fade-up">
 
           <Link href="/athl" className="block" aria-label="Cruip">
-            <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={230} height={180} alt="Features 01" />
+            <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={430} height={580} alt="Features 01" />
           </Link>  					
          </div>
+         <div className="grid grid-cols-1 divide-y max-w-xl md:col-span-1 lg:col-span-1md:max-w-none md:w-full">
+          <div>
+
+          </div>
         <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  {/* <div className="font-architects-daughter text-xl text-purple-600 mb-2">More speed. Less spend</div> */}
+                  <div className="font-architects-daughter text-xl text-purple-600 mb-2 mt-2">Ce que tu vas vivre</div>
                   <h3 className="h3 mb-3 text-black-800">Vivez votre handicap autrement.</h3>
                   {/* <p className="text-xl text-gray-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
                   <ul className="text-lg text-gray-400 -mb-2">
@@ -49,7 +53,8 @@ export default function Athl(){
                   </ul>
                 </div>
               </div>
-        </div>
+              </div>
+        {/* </div> */}
         </div>
         </div>
         </div>
