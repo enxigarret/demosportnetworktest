@@ -1,11 +1,55 @@
-export const metadata = {
-  title: 'Sign In - Open PRO',
-  description: 'Page description',
-}
+"use client"; 
+
+// export const metadata = {
+//   title: 'Sign In - Open PRO',
+//   description: 'Page description',
+// }
 
 import Link from 'next/link'
+import {firebaseApp} from "@/firebase"
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { SinginForm } from '@/components/auth/signin';
+import { useRouter } from 'next/router';
+import Cookies from "js-cookie";
+import { setAuth } from '@/components/auth/use_auth';
 
 export default function SignIn() {
+  const auth = getAuth(firebaseApp);
+  const handleSingin=(e:React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault();
+  
+    
+    const formData = new FormData(e.currentTarget);
+    console.log("eeeee value",e.target,Object.fromEntries(formData))
+    const email = formData.get('email')?.toString()
+    const password = formData.get('password')?.toString();
+    const user = auth.currentUser;
+    console.log("auth",auth,user)  
+    const router = useRouter();
+
+
+    if( email !=null && password){   
+       signInWithEmailAndPassword(auth, email, password)
+         .then((userCredential) => {
+         // Signed in 
+         const user = userCredential.user;
+     
+         setAuth(user.uid)
+      
+
+         //document.cookie = `uid=${user.uid}; path=/; secure; samesite=strict`;
+         router.push('/admin')
+         // sign out + redirect to the page of add items .
+         console.log("user",user)
+         // ...
+       })
+       .catch((error) => {
+         const errorCode = error.code;
+         const errorMessage = error.message;
+         console.log("login error ",errorCode,errorMessage)
+       }); 
+  }
+}
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -18,8 +62,8 @@ export default function SignIn() {
 
           {/* Form */}
           <div className="max-w-sm mx-auto">
-            <form>
-              <div className="flex flex-wrap -mx-3">
+            {/* <form > */}
+              {/* <div className="flex flex-wrap -mx-3">
                 <div className="w-full px-3">
                   <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center">
                     <svg className="w-4 h-4 fill-current text-white opacity-75 shrink-0 mx-4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -29,43 +73,14 @@ export default function SignIn() {
                     <span className="flex-auto pl-16 pr-8 -ml-16">Sign in with Google</span>
                   </button>
                 </div>
-              </div>
-            </form>
+              </div> */}
+            {/* </form> */}
             <div className="flex items-center my-6">
               <div className="border-t border-gray-700 border-dotted grow mr-3" aria-hidden="true"></div>
               <div className="text-gray-400">Or, sign in with your email</div>
               <div className="border-t border-gray-700 border-dotted grow ml-3" aria-hidden="true"></div>
             </div>
-            <form>
-              <div className="flex flex-wrap -mx-3 mb-4">
-                <div className="w-full px-3">
-                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="email">Email</label>
-                  <input id="email" type="email" className="form-input w-full text-gray-300" placeholder="you@yourcompany.com" required />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-4">
-                <div className="w-full px-3">
-                  <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Password</label>
-                  <input id="password" type="password" className="form-input w-full text-gray-300" placeholder="Password (at least 10 characters)" required />
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-4">
-                <div className="w-full px-3">
-                  <div className="flex justify-between">
-                    <label className="flex items-center">
-                      <input type="checkbox" className="form-checkbox" />
-                      <span className="text-gray-400 ml-2">Keep me signed in</span>
-                    </label>
-                    <Link href="/reset-password" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Forgot Password?</Link>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mt-6">
-                <div className="w-full px-3">
-                  <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full">Sign in</button>
-                </div>
-              </div>
-            </form>
+              <SinginForm handleSingin={handleSingin}/>
             <div className="text-gray-400 text-center mt-6">
               Don’t you have an account? <Link href="/signup" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Sign up</Link>
             </div>

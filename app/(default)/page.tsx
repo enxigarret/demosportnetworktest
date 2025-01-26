@@ -19,8 +19,7 @@ export default function Home() {
     <>
       <Hero />
       <Features />
- 
-  
+
 
     
 
@@ -30,3 +29,11 @@ export default function Home() {
     </>
   )
 }
+
+
+//the login 
+//add router priviate for admin page
+//page admin athelete
+//page admin : text : ajouter, supprimer, modifier text
+//page admin : image : ajouter, supprimer, image 
+//page list de athelete 
