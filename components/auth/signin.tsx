@@ -19,6 +19,7 @@ export const SinginForm=({handleSingin}:signinProps)=>{
         setPassword(e.target.value)
      }
     console.log('email+password',email,password)
+    
 
     return (
     <form onSubmit={handleSingin} > 

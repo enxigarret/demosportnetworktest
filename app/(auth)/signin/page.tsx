@@ -1,4 +1,4 @@
-"use client"; 
+'use client'; 
 
 // export const metadata = {
 //   title: 'Sign In - Open PRO',
@@ -9,12 +9,26 @@ import Link from 'next/link'
 import {firebaseApp} from "@/firebase"
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { SinginForm } from '@/components/auth/signin';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import Cookies from "js-cookie";
 import { setAuth } from '@/components/auth/use_auth';
+import { useEffect, useState } from 'react';
+import { redirect } from 'next/navigation'
 
 export default function SignIn() {
   const auth = getAuth(firebaseApp);
+  const router = useRouter();
+  const [isAuthorized,setIsAuthorized]=useState(false)
+
+  useEffect(() => {
+    // Ensure router is only used on the client side
+    if (!router) return;
+  }, [router]);
+
+  // useEffect(()=>{
+  //   router.push('/admin')
+  // },[isAuthorized])
+  
   const handleSingin=(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
   
@@ -25,20 +39,26 @@ export default function SignIn() {
     const password = formData.get('password')?.toString();
     const user = auth.currentUser;
     console.log("auth",auth,user)  
-    const router = useRouter();
 
+    console.log("auth 1")  
 
     if( email !=null && password){   
        signInWithEmailAndPassword(auth, email, password)
          .then((userCredential) => {
          // Signed in 
+         console.log("user come in ")
          const user = userCredential.user;
-     
+         console.log("user 1")
          setAuth(user.uid)
-      
+         setIsAuthorized(true)
+         if(router){
+          router.push('/admin')
+         }
+         console.log("user 2")
 
          //document.cookie = `uid=${user.uid}; path=/; secure; samesite=strict`;
-         router.push('/admin')
+         //redirect('/admin')
+     
          // sign out + redirect to the page of add items .
          console.log("user",user)
          // ...
