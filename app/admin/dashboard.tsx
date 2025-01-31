@@ -22,7 +22,7 @@ import { getAthelete } from "@/data/admin-tools";
 
  const AdminDashboard =()=>{
     const  context = checkHasAuth();
-    const [athlet,setAthlet]= useState<AthletProps>({city:'', description:'', name:''
+    const [athlet,setAthlet]= useState<AthletProps>({city:'', description:'', name:'',image:''
           });
     const auth = getAuth(firebaseApp);
     const searchParams = useSearchParams();

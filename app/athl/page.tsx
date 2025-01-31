@@ -13,7 +13,8 @@ export interface AthletProps {
     description:string,
 
  
-    name:string
+    name:string,
+    image:string
   }
 
 
@@ -23,9 +24,11 @@ export default function Athl(){
    
     description:'',
  
-    name:''
+    name:'',
+    image:''
   });
   const isAuthorized = checkHasAuth();
+  const [imageUrl, setImageUrl] = useState<string>('');
   const searchParams = useSearchParams();
   // //const { query } = router;
   const id_athelet = searchParams.get('id')
@@ -37,6 +40,7 @@ export default function Athl(){
         const athleteData = await athelet as AthletProps;
         if (athleteData) { // Await the promise
         setAthlet(athleteData);
+        setImageUrl( athleteData.image); 
         }
       }
     
@@ -59,7 +63,7 @@ export default function Athl(){
           <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-1 lg:col-span-1 mb-8  md:mb-0 md:order-0" data-aos="fade-up">
 
           <Link href="/athl" className="block" aria-label="Cruip">
-            <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={430} height={580} alt="Features 01" />
+            <Image className="max-w-full mx-auto md:max-w-none h-auto" src={imageUrl} width={430} height={580} alt="Features 01" />
           </Link>  					
          </div>
          <div className="grid grid-cols-1 divide-y max-w-xl md:col-span-1 lg:col-span-1md:max-w-none md:w-full">

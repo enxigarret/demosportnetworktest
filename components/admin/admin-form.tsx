@@ -12,7 +12,8 @@ import { AthletProps } from '@/app/athl/page';
 export interface UserInfo {
     name:string;
     city:string;
-    description:string
+    description:string;
+    image:string
 }
 
 
@@ -32,7 +33,8 @@ const AdminForm=(props:{athletInfo:AthletProps,id_athlet:string|null})=>{
     const [userInfo,setUserinfo] =useState<AthletProps>({
         name:'',
         city:'',
-        description:''
+        description:'',
+        image:''
      });
 
      useEffect(()=>{
@@ -63,6 +65,13 @@ const AdminForm=(props:{athletInfo:AthletProps,id_athlet:string|null})=>{
                 description:e.target.value}
                 )
         }
+        if(e.target.name ==='image'){
+            setUserinfo({
+                ...userInfo,
+                image:e.target.value}
+                )
+        }
+
     
        // setName(e.target.value)
         
@@ -157,6 +166,17 @@ const AdminForm=(props:{athletInfo:AthletProps,id_athlet:string|null})=>{
                 id="city" 
                 name="city"  
                 value={userInfo.city}
+                onChange={handleUserInfoChange}
+                className="border rounded p-2"
+            />
+        </div>
+        <div className="flex flex-col">
+            <label className="mb-1" htmlFor="imageUrl">Image URL:</label>
+            <input 
+                type="text" 
+                id="image" 
+                name="image"  
+                value={userInfo.image} // Ensure userInfo has imageUrl property
                 onChange={handleUserInfoChange}
                 className="border rounded p-2"
             />
