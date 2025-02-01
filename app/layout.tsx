@@ -44,6 +44,9 @@ export default function RootLayout({
   const [isOpen, setIsOpen] = useState(false);
   return (
     <html lang="en">
+      <head>
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/49019076.js"></script>
+      </head>
       <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-white text-gray-200 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden">
      
