@@ -27,9 +27,9 @@ export default function AthleteProfile(athlete:any) {
                   <path className="stroke-current text-purple-100" d="M30 39.313l-4.18 2.197L27 34.628l-5-4.874 6.91-1.004L32 22.49l3.09 6.26L42 29.754l-3 2.924" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd" />
                   <path className="stroke-current text-purple-300" d="M43 42h-9M43 37h-9" strokeLinecap="square" strokeWidth="2" />
                 </svg> */}
-                <div className="w-48 h-48 mb-18" >
+                <div className="w-48 h-48 mb-18  rounded-lg overflow-hidden">
                 <Link href={{pathname:"/athl" ,query:{id:athlete.athlete.id}}} className="block" aria-label="Cruip">
-                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={athlete.athlete.image} width={180} height={135} alt="Features 01" />
+                <Image className="max-w-full h-auto" src={athlete.athlete.image} width={180} height={135} alt="Features 01" />
               </Link>  					
                 </div>
 
