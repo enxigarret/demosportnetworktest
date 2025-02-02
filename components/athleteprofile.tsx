@@ -29,7 +29,7 @@ export default function AthleteProfile(athlete:any) {
                 </svg> */}
                 <div className="w-48 h-48 mb-18" >
                 <Link href={{pathname:"/athl" ,query:{id:athlete.athlete.id}}} className="block" aria-label="Cruip">
-                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={FeatImage01} width={180} height={135} alt="Features 01" />
+                <Image className="max-w-full mx-auto md:max-w-none h-auto" src={athlete.athlete.image} width={180} height={135} alt="Features 01" />
               </Link>  					
                 </div>
 
