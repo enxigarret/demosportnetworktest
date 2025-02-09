@@ -3,7 +3,7 @@ export default function Entreprises() {
       <section>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
-        <div className="py-18 pt-30 md:pt-40 md:py-20 max-w-3xl mx-auto text-center pb-12 md:pb-20">
+        <div className="py-18 pt-32 md:pt-40 md:py-20 max-w-3xl mx-auto text-center pb-12 md:pb-20">
               <h2 className="h2 mb-4 text-black-800">Pour toute collaboration, merci de prendre rendez-vous par e-mail.</h2>
               {/* <p className="text-xl text-gray-400">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> */}
             </div>
