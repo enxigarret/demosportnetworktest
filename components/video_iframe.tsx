@@ -1,6 +1,7 @@
 
 // Create a component that renders the iframe
 import React from 'react';
+import '../public/styles/style.css'
 
 const FacebookVideoEmbed = () => {
   return (
@@ -11,6 +12,7 @@ const FacebookVideoEmbed = () => {
         width="1024"
         height="576"
         style={{ border: 'none', overflow: 'hidden' }}
+        className='responsive-iframe'
    
         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowFullScreen={true}

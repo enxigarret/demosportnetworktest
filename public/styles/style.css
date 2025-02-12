@@ -1,0 +1,16 @@
+.responsive-iframe {
+    max-width: 1024px; /* Set max width to 1024px */
+
+  }
+  
+  @media (max-width: 1024px) {
+    .responsive-iframe {
+      width: auto; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .responsive-iframe {
+      width: 100%; /* Full width on mobile */
+    }
+  }

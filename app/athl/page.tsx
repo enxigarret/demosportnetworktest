@@ -88,7 +88,7 @@ export default function Athl(){
             </div>
             </div>
         <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
-                <div className="md:pr-4 lg:pr-12 xl:pr-16">
+                <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
                   <div className="font-architects-daughter text-xl text-purple-600 mb-2 mt-2">Ce que tu vas vivre</div>
                   <h4 className="h4 mb-3 text-black-800">Vivez votre handicap autrement.</h4>
                   {/* <p className="text-xl text-gray-400 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}

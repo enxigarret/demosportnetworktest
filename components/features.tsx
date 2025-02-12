@@ -17,7 +17,7 @@ export default function Features() {
             <h2 className="h2 mb-4 text-black-800">Notre sportif du moment</h2>
             <p className="text-xl text-gray-400">Découvrez le handisport à travers Thomas Numitor</p>
           </div>
-          <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center pb-4">
+          <div className="max-w-max mx-auto sm:max-w-none sm:flex sm:justify-center sm:w-auto pb-4">
              <button >
                 <a className="btn text-white bg-gray-700 hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="#0" >Découvrir les ambassadeurs </a>
              </button>
@@ -25,7 +25,7 @@ export default function Features() {
 
           {/* Items */}
           {/* <div className="max-w-sm mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 items-start md:max-w-2xl lg:max-w-none" data-aos-id-blocks> */}
-          <div className="relative pt-0 pb-10 md:pt-0 md:pb-16">
+          <div className="relative pt-0 pb-10 md:pt-0 md:pb-16 sm:w-auto w-full">
           <ModalVideo
             thumb={VideoThumb}
             thumbWidth={1024}
