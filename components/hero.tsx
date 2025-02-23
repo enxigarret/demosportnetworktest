@@ -67,9 +67,9 @@ export default function Hero() {
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">The Sport Network est un réseau social nouveau, où des athlètes paralympiques, des entreprises, des para-athlètes professionnels, amateurs de sport en situation de handicap physique ou mental se rencontrent.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-              <Link href="/champions" className="block" aria-label="Cruip">
-                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0 whitespace-nowrap" href="#0">Découvrir <br/> Thomas Numitor</a>
-                </Link>
+              {/* <Link href="/champions" className="block" aria-label="Cruip"> */}
+                <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0 whitespace-nowrap" href="/champions">Découvrir <br/> Thomas Numitor</a>
+                {/* </Link> */}
               </div>
               <div data-aos="fade-up " data-aos-delay="600">
                 <a className="btn text-white h-37 bg-gray-700 hover:bg-purple-700  mb-4  sm:mb-0  w-full sm:w-auto sm:ml-4" href="mailto:pasdeloup.jorge@gmail.com">Prendre <br/>rendez-vous</a>
