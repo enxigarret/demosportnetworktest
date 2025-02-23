@@ -77,7 +77,7 @@ export default function Hero() {
               <div data-aos="fade-up" data-aos-delay="600"  >
                
                  <button onClick={()=>setIsOpen(true)} className="w-full sm:w-auto sm:ml-4">
-                   <a className="btn text-white bg-gray-700 h-70px hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="#0" >Partager via <br/>le réseau social </a>
+                   <a className="btn text-white bg-gray-700 h-70px hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="/" >Partager via <br/>le réseau social </a>
                 </button>
               </div>
               <ModalMaintenance  isOpen={isOpen} onClose={()=>setIsOpen(false)}/>
