@@ -41,16 +41,21 @@ export const getAthelete=async(id:string)=>{
 export const getAllAthelete= async()=>{
         //const [athls,setAthls] = useState<any>([])
         const isOpen = checkHasAuth()
-        console.log("check login",isOpen)
-    
+
+      try{
         const querySnapshot = await getDocs(collection(db, 'athelets'));
         const postsData = querySnapshot.docs.map((doc) => ({
             id: doc.id,
             ...doc.data()
           }));
-          console.log('all data get',postsData)
+          // console.log('all data get',postsData)
         //   setAthls(postsData);
         return postsData;
+      }catch(error){
+        console.error("Error fetching documents:", error);
+
+
+      }
     }
         // Clear the input field
    

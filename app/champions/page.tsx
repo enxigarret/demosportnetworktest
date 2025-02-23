@@ -1,4 +1,4 @@
-'use client';
+
 import AthleteProfile from "@/components/athleteprofile";
 import HeroChamp from "@/components/hero-champ";
 import Zigzag from "@/components/zigzag";
@@ -23,7 +23,7 @@ name:string;
 export default async function Champions() {
 
   const allAthelets = await getAllAthelete();
-  console.log('all atheltes',allAthelets)
+ 
   if(!allAthelets){
     return <p>Loading</p>
   }
