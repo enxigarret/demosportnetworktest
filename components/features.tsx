@@ -19,7 +19,7 @@ export default function Features() {
           </div>
           <div className="max-w-max mx-auto sm:max-w-none sm:flex sm:justify-center sm:w-auto pb-4">
              <button >
-                <a className="btn text-white bg-gray-700 hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="#0" >Découvrir les ambassadeurs </a>
+                <a className="btn text-white bg-gray-700 hover:bg-purple-700 w-full sm:w-auto sm:ml-4" href="/champions" >Découvrir les ambassadeurs </a>
              </button>
           </div>
 
