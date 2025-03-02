@@ -45,8 +45,8 @@ import { getAthelete } from "@/data/admin-tools";
 
   
 
-    console.log("the auth in admin",auth,id_ahlt,athlet)
-    console.log("the athlete in admin",athlet)
+    // console.log("the auth in admin",auth,id_ahlt,athlet)
+    // console.log("the athlete in admin",athlet)
    
   
   

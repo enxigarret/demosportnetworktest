@@ -18,7 +18,7 @@ export const SinginForm=({handleSingin}:signinProps)=>{
      const handlePassChange =(e:React.ChangeEvent<HTMLInputElement>)=>{
         setPassword(e.target.value)
      }
-    console.log('email+password',email,password)
+
     
 
     return (

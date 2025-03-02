@@ -47,7 +47,7 @@ export default function Athl(){
     fetchAthlete();
   },[])
  
-   console.log("the query",athlet)
+
     return (
         <>
         <section className="mt-20">

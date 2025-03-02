@@ -29,7 +29,7 @@ export const getAthelete=async(id:string)=>{
         const docSnap = await getDoc(docRef);
     
         if (docSnap.exists()) {
-          console.log('Document data:', docSnap.data());
+     
           return docSnap.data();  // Return document data
         } else {
           console.log('No such document!');
@@ -76,7 +76,7 @@ export const deleteAthelet=async(id_athelet:string)=>{
  
         const docRef = doc(db, 'athelets', id_athelet); // Replace 'posts' with your collection
         const deleteInfo= await deleteDoc(docRef);
-        console.log('the delete',deleteInfo)
+   
        
   
 }

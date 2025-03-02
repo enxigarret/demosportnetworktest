@@ -46,7 +46,7 @@ const AdminForm=(props:{athletInfo:AthletProps,id_athlet:string|null})=>{
     //  const [description,setDescription] =useState<string>();
 
      const handleUserInfoChange =(e:React.ChangeEvent<HTMLInputElement |HTMLTextAreaElement>)=>{
-        console.log("event",e)
+   
         if(e.target.name ==='name'){
             setUserinfo({
                 ...userInfo,
@@ -128,8 +128,7 @@ const AdminForm=(props:{athletInfo:AthletProps,id_athlet:string|null})=>{
                          const docRef = await addAthelete({
                            ...userInfo,
                          });
-                       
-                         console.log("the doct ref",docRef)
+                   
                // Clear the input field
                           window.alert("Athlete added successfully!");
                           if(docRef.id){

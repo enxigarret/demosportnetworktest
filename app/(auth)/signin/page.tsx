@@ -34,33 +34,33 @@ export default function SignIn() {
   
     
     const formData = new FormData(e.currentTarget);
-    console.log("eeeee value",e.target,Object.fromEntries(formData))
+    // console.log("eeeee value",e.target,Object.fromEntries(formData))
     const email = formData.get('email')?.toString()
     const password = formData.get('password')?.toString();
     const user = auth.currentUser;
-    console.log("auth",auth,user)  
+    // console.log("auth",auth,user)  
 
-    console.log("auth 1")  
+ 
 
     if( email !=null && password){   
        signInWithEmailAndPassword(auth, email, password)
          .then((userCredential) => {
          // Signed in 
-         console.log("user come in ")
+
          const user = userCredential.user;
-         console.log("user 1")
+
          setAuth(user.uid)
          setIsAuthorized(true)
          if(router){
           router.push('/admin')
          }
-         console.log("user 2")
+
 
          //document.cookie = `uid=${user.uid}; path=/; secure; samesite=strict`;
          //redirect('/admin')
      
          // sign out + redirect to the page of add items .
-         console.log("user",user)
+        // console.log("user",user)
          // ...
        })
        .catch((error) => {

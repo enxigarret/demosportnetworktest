@@ -12,7 +12,7 @@ export default function MobileMenu() {
   // close the mobile menu on click outside
   useEffect(() => {
     const clickHandler = ({ target }: { target: EventTarget | null }): void => {
-  console.log('the click event,',mobileNavOpen,mobileNav?.current?.contains(target as Node),trigger.current?.contains(target as Node))
+  // console.log('the click event,',mobileNavOpen,mobileNav?.current?.contains(target as Node),trigger.current?.contains(target as Node))
  // console.log("come to check",mobileNavOpen,mobileNav.current?.contains(target as Node),trigger.current.contains(target as Node))
       if (!mobileNav.current || !trigger.current) return;
       if ( trigger.current.contains(target as Node)) return;
@@ -25,7 +25,7 @@ export default function MobileMenu() {
        document.addEventListener('click', clickHandler);
   
     return () =>  {
-      console.log("come hrer")
+
       document.removeEventListener('click', clickHandler)}
      
   },[])
