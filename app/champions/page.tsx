@@ -1,4 +1,6 @@
 
+'use client';
+// export const dynamic = 'force-dynamic'; 
 import AthleteProfile from "@/components/athleteprofile";
 import HeroChamp from "@/components/hero-champ";
 import Zigzag from "@/components/zigzag";
@@ -23,6 +25,9 @@ name:string;
 export default async function Champions() {
 
   const allAthelets = await getAllAthelete();
+
+
+
  
   if(!allAthelets){
     return <p>Loading</p>

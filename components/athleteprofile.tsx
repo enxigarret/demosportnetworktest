@@ -11,7 +11,7 @@ import { infoAthlete } from '@/app/champions/page'
 
 export default function AthleteProfile(athlete:any) {
 
-    console.log("every ath",athlete)
+    // console.log("every ath",athlete)
 
     
   return (
