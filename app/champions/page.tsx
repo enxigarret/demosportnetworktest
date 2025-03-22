@@ -1,6 +1,6 @@
 
-'use client';
-// export const dynamic = 'force-dynamic'; 
+// 'use client';
+export const dynamic = 'force-dynamic'; 
 import AthleteProfile from "@/components/athleteprofile";
 import HeroChamp from "@/components/hero-champ";
 import Zigzag from "@/components/zigzag";
