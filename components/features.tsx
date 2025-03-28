@@ -15,7 +15,7 @@ export default function Features() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-4 md:pb-20">
             <h2 className="h2 mb-4 text-black-800">Notre sportif du moment</h2>
-            <p className="text-xl text-gray-400">Découvrez le handisport à travers Thomas Numitor</p>
+            <p className="text-xl text-gray-400">Découvrez le handisport à travers Hugo Barbotin</p>
           </div>
           <div className="max-w-max mx-auto sm:max-w-none sm:flex sm:justify-center sm:w-auto pb-4">
              <button >
