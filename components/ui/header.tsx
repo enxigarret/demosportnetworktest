@@ -1,9 +1,10 @@
 "use client"
 import Link from 'next/link'
-import MobileMenu from './mobile-menu'
+
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from 'react';
+import MobileMenu from '../mobile-menu';
 
 const Products = () => {
   return (

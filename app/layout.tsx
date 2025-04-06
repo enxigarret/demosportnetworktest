@@ -8,7 +8,8 @@ import { createContext, useContext, useState } from 'react';
 
 
 import Header from '@/components/ui/header'
-import Banner from '@/components/banner'
+
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -55,7 +56,7 @@ export default function RootLayout({
                 {children}
            </ AdminContext.Provider >
             
-          <Banner />
+          {/* <Banner /> */}
         </div>
       </body>
     </html>

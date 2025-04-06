@@ -1,2 +1,2 @@
-# Free React / Next.js landing page template
+# sportnetwork version1.0.
 
